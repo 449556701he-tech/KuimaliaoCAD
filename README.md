@@ -8,6 +8,8 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 
 由大胖爱吃肉（HJX）基于 [开源 MiniCAD](https://github.com/CHMOSE023/MiniCAD) 改版。
 
+> 亏麻了CAD是个人为爱发电的项目。目前提供本地看图、算量和审图功能。需要现场照片批注和跨设备云同步的朋友，请使用[广联达 CAD 快速看图](https://cad.everdrawing.com/)。
+
 ## 当前版本 1.2.0
 
 - [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.0/LCQCAD-1.2.0-Windows-x64-Setup.exe)。运行安装器，从开始菜单打开亏麻了CAD。安装结束可勾选前往系统设置，为 DWG／DXF 选择默认应用。默认使用 Direct3D 11，也可用 `--gpu d3d12` 指定 Direct3D 12。
