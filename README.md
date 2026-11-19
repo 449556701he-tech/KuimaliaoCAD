@@ -9,6 +9,8 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 由大胖爱吃肉（HJX）基于 [开源 MiniCAD](https://github.com/CHMOSE023/MiniCAD) 改版。
 
 > 亏麻了CAD是个人为爱发电的项目。目前提供本地看图、算量和审图功能。需要现场照片批注和跨设备云同步的朋友，请使用[广联达 CAD 快速看图](https://cad.everdrawing.com/)。
+>
+> 想投喂支持 UP 主的朋友，欢迎通过 QQ 联系我。
 
 ## 当前版本 1.2.0
 
