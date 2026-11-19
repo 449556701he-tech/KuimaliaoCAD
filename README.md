@@ -8,11 +8,11 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 
 由大胖爱吃肉（HJX）基于 [开源 MiniCAD](https://github.com/CHMOSE023/MiniCAD) 改版。
 
-## 当前版本 1.0.2
+## 当前版本 1.1.0
 
-- [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.0.2/LCQCAD-1.0.2-Windows-x64-Setup.exe)。运行安装器，从开始菜单打开亏麻了CAD。安装结束可勾选前往系统设置，为 DWG／DXF 选择默认应用。渲染使用 Direct3D。遇到旧集显问题，可从开始菜单打开「D3D11 兼容启动」。
-- [macOS Apple Silicon 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.0.2/LCQCAD-1.0.2-macOS-arm64.zip)。解压后把「LCQCAD.app」拖进「应用程序」再启动。Finder 右键「打开方式」可选 LCQCAD，首次启动可选择是否设为 DWG／DXF 的默认应用。渲染使用 Metal。
-- 安装包可从 GitHub Releases 直接下载。[1.0.2 发布记录](https://github.com/449556701he-tech/KuimaliaoCAD/releases/tag/v1.0.2) · [新手指南](docs/release-notes/v1.0.0-guide.md)
+- [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.1.0/LCQCAD-1.1.0-Windows-x64-Setup.exe)。运行安装器，从开始菜单打开亏麻了CAD。安装结束可勾选前往系统设置，为 DWG／DXF 选择默认应用。渲染使用 Direct3D。遇到旧集显问题，可从开始菜单打开「D3D11 兼容启动」。
+- [macOS Apple Silicon 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.1.0/LCQCAD-1.1.0-macOS-arm64.zip)。解压后把「LCQCAD.app」拖进「应用程序」再启动。Finder 右键「打开方式」可选 LCQCAD，首次启动可选择是否设为 DWG／DXF 的默认应用。渲染使用 Metal。
+- 安装包可从 GitHub Releases 直接下载。[1.1.0 发布记录](https://github.com/449556701he-tech/KuimaliaoCAD/releases/tag/v1.1.0) · [新手指南](docs/release-notes/v1.0.0-guide.md)
 
 ### 这一版能做什么
 
@@ -22,6 +22,7 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 | 测量算量 | 对齐、水平及垂直线性、坐标、弧长、点到直线、连续测量、分段长度、按图层批量计长。支持矩形面积、含弧线面积、填充面积、侧面积、面积偏移，以及圆、半径和角度。 |
 | 比例与单位 | 布局视口比例、两点校准，长度支持 m／mm，面积默认 ㎡、三位小数，可切换 mm²。 |
 | 批注与统计 | 引线、文字、云线、直线、矩形、椭圆和任意线。本机自动保存，支持导出 `.mcnotes` 交接，可按名称或颜色分组，分类显隐，统计导出 CSV，图面可导出 SVG。 |
+| 打印与 PDF | A4 至 A0、横竖方向、视觉预览，支持适合纸张、固定比例、矢量 PDF 和系统打印。 |
 | 图纸对比 | 旧版与新版 DWG／DXF 叠图、两点对齐、差异筛选与定位、匹配复核和 CSV 导出。 |
 | 基础 CAD 编辑 | 切换到「编辑原图」后可用常见二维绘图和编辑功能，例如多段线、移动、复制和图层操作。 |
 
@@ -55,6 +56,10 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 2. 选 **叠图**。两图位置错开时，点 **两点对齐**，先在旧图选 A、B，再在新版按相同顺序选对应点。优先使用相距较远且两版都保留的轴线交点。
 3. 绿色是新增，红色是删除，橙色是修改前，蓝色是修改后。点差异行定位。交付前查看 **覆盖范围** 和 **疑似修改**，然后按当前筛选导出 CSV。
 
+### 5. 打印图纸或导出 PDF
+
+点「文件 → 打印图纸」，选纸张与打印范围。勾选「适合纸张」可以缩放到一页；取消后模型按指定比例、布局按纸面 1:1。预览后导出矢量 PDF 或打开系统打印窗口。位图出图只显示边框。
+
 ## 兼容性与当前范围
 
 - 天正门窗、结构板、字体或外参显示有缺失时，先核对图层、布局、字体及外参。关键工程图建议让出图方同时提供转换为普通 CAD 图元的副本，以便复核。
@@ -74,5 +79,6 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 | 1.0.0 | 全部测量工具统一放置阶段，顶部操作提示，连续测量整段弧预览，原创测量图标，顶部图纸对比，D3D11 兼容启动。 |
 | 1.0.1 | 绘图／修改页切换编辑模式，状态栏开关，拆分图纸另存与标注另存。 |
 | 1.0.2 | 测量本机自动保存、跨机器同名文件匹配与复核、开图定位主体、LCQCAD 文件关联。 |
+| 1.1.0 | 图纸打印、纸面预览及定比例矢量 PDF。 |
 
 后续继续验证不同工程图的天正显示和布局测量，实测低配 Windows 集显，并逐步完善统计和算量接口。
