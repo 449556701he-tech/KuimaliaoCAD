@@ -10,7 +10,7 @@
 
 - [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.0.0/KuimaliaoCAD-1.0.0-Windows-x64-Setup.exe)。运行安装器，从开始菜单打开亏麻了CAD。渲染使用 Direct3D。遇到旧集显问题，可从开始菜单打开「D3D11 兼容启动」。
 - [macOS Apple Silicon 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.0.0/KuimaliaoCAD-1.0.0-macOS-arm64.zip)。解压后把「亏麻了CAD.app」拖进「应用程序」再启动。渲染使用 Metal。
-- 当前仓库为私有仓库，下载需登录有权限的 GitHub 账号。[1.0 发布记录](https://github.com/449556701he-tech/KuimaliaoCAD/releases/tag/v1.0.0) · [1.0 新手指南](docs/release-notes/v1.0.0-guide.md)
+- 安装包可从 GitHub Releases 直接下载。[1.0 发布记录](https://github.com/449556701he-tech/KuimaliaoCAD/releases/tag/v1.0.0) · [1.0 新手指南](docs/release-notes/v1.0.0-guide.md)
 
 ### 这一版能做什么
 
