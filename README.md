@@ -8,11 +8,17 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 
 由大胖爱吃肉（HJX）基于 [开源 MiniCAD](https://github.com/CHMOSE023/MiniCAD) 改版。
 
-## 当前版本 1.1.0
+## 当前版本 1.2.0
 
-- [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.1.0/LCQCAD-1.1.0-Windows-x64-Setup.exe)。运行安装器，从开始菜单打开亏麻了CAD。安装结束可勾选前往系统设置，为 DWG／DXF 选择默认应用。渲染使用 Direct3D。遇到旧集显问题，可从开始菜单打开「D3D11 兼容启动」。
-- [macOS Apple Silicon 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.1.0/LCQCAD-1.1.0-macOS-arm64.zip)。解压后把「LCQCAD.app」拖进「应用程序」再启动。Finder 右键「打开方式」可选 LCQCAD，首次启动可选择是否设为 DWG／DXF 的默认应用。渲染使用 Metal。
-- 安装包可从 GitHub Releases 直接下载。[1.1.0 发布记录](https://github.com/449556701he-tech/KuimaliaoCAD/releases/tag/v1.1.0) · [新手指南](docs/release-notes/v1.0.0-guide.md)
+- [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.0/LCQCAD-1.2.0-Windows-x64-Setup.exe)。运行安装器，从开始菜单打开亏麻了CAD。安装结束可勾选前往系统设置，为 DWG／DXF 选择默认应用。默认使用 Direct3D 11，也可用 `--gpu d3d12` 指定 Direct3D 12。
+- [macOS Apple Silicon 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.0/LCQCAD-1.2.0-macOS-arm64.zip)。解压后把「LCQCAD.app」拖进「应用程序」再启动。Finder 右键「打开方式」可选 LCQCAD，首次启动可选择是否设为 DWG／DXF 的默认应用。渲染使用 Metal。
+- [1.2.0 发布说明与 SHA-256 校验文件](https://github.com/449556701he-tech/KuimaliaoCAD/releases/tag/v1.2.0) · [新手指南](docs/release-notes/v1.0.0-guide.md)
+
+### 1.2.0 更新亮点
+
+- 独立算量模式保持原图只读。可以用右侧特性面板编辑标注，也可以直接拖动标注的几何夹点。
+- 标注可按自定义分类名称或显示颜色分组。新增点位计数，支持手动打点和框选同名图块。
+- 矢量 PDF 出图加入压缩，图纸对比改进了两点对齐和捕捉提示。
 
 ### 这一版能做什么
 
@@ -80,5 +86,6 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 | 1.0.1 | 绘图／修改页切换编辑模式，状态栏开关，拆分图纸另存与标注另存。 |
 | 1.0.2 | 测量本机自动保存、跨机器同名文件匹配与复核、开图定位主体、LCQCAD 文件关联。 |
 | 1.1.0 | 图纸打印、纸面预览及定比例矢量 PDF。 |
+| 1.2.0 | 独立算量改进、标注夹点编辑、点位计数和矢量 PDF 压缩。 |
 
 后续继续验证不同工程图的天正显示和布局测量，实测低配 Windows 集显，并逐步完善统计和算量接口。
