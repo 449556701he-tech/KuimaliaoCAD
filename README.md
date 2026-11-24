@@ -14,7 +14,7 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 
 ## 当前版本 1.2.3
 
-- [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.3/%E4%BA%8F%E9%BA%BB%E4%BA%86CAD-1.2.3-Windows-x64-Setup.exe)。默认使用 Direct3D 11，可用 `--gpu d3d12` 指定 Direct3D 12。
+- [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.3/CAD-1.2.3-Windows-x64-Setup.exe)。默认使用 Direct3D 11，可用 `--gpu d3d12` 指定 Direct3D 12。
 - [macOS Apple Silicon 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.3/LCQCAD-1.2.3-macOS-arm64.zip)。解压后把「LCQCAD.app」拖进「应用程序」再启动，渲染使用 Metal。
 - [1.2.3 发布说明与 SHA-256 校验文件](https://github.com/449556701he-tech/KuimaliaoCAD/releases/tag/v1.2.3) · [新手指南](docs/release-notes/v1.0.0-guide.md)
 
