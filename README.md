@@ -12,17 +12,18 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 >
 > 想投喂支持 UP 主的朋友，欢迎通过 QQ 联系我（**449556701**）。
 
-## 当前版本 1.2.0
+## 当前版本 1.2.3
 
-- [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.0/LCQCAD-1.2.0-Windows-x64-Setup.exe)。运行安装器，从开始菜单打开亏麻了CAD。安装结束可勾选前往系统设置，为 DWG／DXF 选择默认应用。默认使用 Direct3D 11，也可用 `--gpu d3d12` 指定 Direct3D 12。
-- [macOS Apple Silicon 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.0/LCQCAD-1.2.0-macOS-arm64.zip)。解压后把「LCQCAD.app」拖进「应用程序」再启动。Finder 右键「打开方式」可选 LCQCAD，首次启动可选择是否设为 DWG／DXF 的默认应用。渲染使用 Metal。
-- [1.2.0 发布说明与 SHA-256 校验文件](https://github.com/449556701he-tech/KuimaliaoCAD/releases/tag/v1.2.0) · [新手指南](docs/release-notes/v1.0.0-guide.md)
+- [Windows x64 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.3/%E4%BA%8F%E9%BA%BB%E4%BA%86CAD-1.2.3-Windows-x64-Setup.exe)。默认使用 Direct3D 11，可用 `--gpu d3d12` 指定 Direct3D 12。
+- [macOS Apple Silicon 安装包](https://github.com/449556701he-tech/KuimaliaoCAD/releases/download/v1.2.3/LCQCAD-1.2.3-macOS-arm64.zip)。解压后把「LCQCAD.app」拖进「应用程序」再启动，渲染使用 Metal。
+- [1.2.3 发布说明与 SHA-256 校验文件](https://github.com/449556701he-tech/KuimaliaoCAD/releases/tag/v1.2.3) · [新手指南](docs/release-notes/v1.0.0-guide.md)
 
-### 1.2.0 更新亮点
+### 1.2.3 更新亮点
 
-- 独立算量模式保持原图只读。可以用右侧特性面板编辑标注，也可以直接拖动标注的几何夹点。
-- 标注可按自定义分类名称或显示颜色分组。新增点位计数，支持手动打点和框选同名图块。
-- 矢量 PDF 出图加入压缩，图纸对比改进了两点对齐和捕捉提示。
+- 可批量把 DWG／DXF 转成普通 AutoCAD 2018 DXF，供 Blender、AI 工作流等读取；原图不改写，转换报告会列出跳过或失败的对象。
+- 增补部分天正建筑、结构和设备图元的显示与转换，包括已验证的房间边界、楼梯、带形窗、幕墙及消防设备实例。
+- 大图转换在后台运行，显示当前图纸和读取进度；可以在当前图纸处理完后停止后续转换。
+- 修复反向 XCLIP 块裁剪记录未被正确还原的问题，解决 1# 楼梁施工图中二层平面局部图元缺失。
 
 ### 这一版能做什么
 
@@ -34,6 +35,7 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 | 批注与统计 | 引线、文字、云线、直线、矩形、椭圆和任意线。本机自动保存，支持导出 `.mcnotes` 交接，可按名称或颜色分组，分类显隐，统计导出 CSV，图面可导出 SVG。 |
 | 打印与 PDF | A4 至 A0、横竖方向、视觉预览，支持适合纸张、固定比例、矢量 PDF 和系统打印。 |
 | 图纸对比 | 旧版与新版 DWG／DXF 叠图、两点对齐、差异筛选与定位、匹配复核和 CSV 导出。 |
+| 建模 DXF | 多张 DWG／DXF 批量导出为普通 DXF；已识别的天正对象转换为文字、图块和线条，便于 Blender 等工具读取。跳过项见转换报告。 |
 | 基础 CAD 编辑 | 切换到「编辑原图」后可用常见二维绘图和编辑功能，例如多段线、移动、复制和图层操作。 |
 
 ## 使用说明
@@ -72,7 +74,7 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 
 ## 兼容性与当前范围
 
-- 天正门窗、结构板、字体或外参显示有缺失时，先核对图层、布局、字体及外参。关键工程图建议让出图方同时提供转换为普通 CAD 图元的副本，以便复核。
+- 天正对象仍按已实现的类型与数据版本逐项支持；未识别或不支持的对象可能跳过，并写入转换报告。关键工程图请与原始 CAD／天正软件核对。
 - 当前图纸对比以已解析的可见二维几何和文字为主。覆盖范围显示两侧可比较图元数。遇到空布局提示时，切换有内容的布局；零差异时仍可核对跳过的对象与缺失外参。
 - 定距测量、照片批注、云同步和标准 MCP 客户端联调属于当前未交付范围。
 
@@ -91,5 +93,6 @@ LCQ 代表 Loss（亏损）、Cost（成本）、Quantity（工程量）。
 | 1.0.2 | 测量本机自动保存、跨机器同名文件匹配与复核、开图定位主体、LCQCAD 文件关联。 |
 | 1.1.0 | 图纸打印、纸面预览及定比例矢量 PDF。 |
 | 1.2.0 | 独立算量改进、标注夹点编辑、点位计数和矢量 PDF 压缩。 |
+| 1.2.3 | 批量建模 DXF、更多天正图元恢复，以及梁图反向 XCLIP 显示修复。 |
 
 后续继续验证不同工程图的天正显示和布局测量，实测低配 Windows 集显，并逐步完善统计和算量接口。
